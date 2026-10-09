@@ -33,6 +33,7 @@ export default class ComponentCoches extends Component {
     render() {
         return (
         <div>
+            <h1>Coches</h1>
             <form>
                 <select ref={this.cocheID}>
                 {
@@ -41,13 +42,13 @@ export default class ComponentCoches extends Component {
                     })
                 }
                 </select>
+                <br/>
                 <button onClick={this.cargarComponent}>Enviar</button>
                 {
-                    this.state.coche !== 0 ?
+                    this.state.coche !== 0 &&
 
                     <ComponentCoche id={this.state.coche}/>
 
-                    : ""
                 }
             </form>
         </div>
